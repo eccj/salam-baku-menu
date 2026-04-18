@@ -1,0 +1,128 @@
+{
+  "restaurant": {
+    "name": "SALAM BAKU",
+    "tagline": "RESTAURANT",
+    "currency": "kzt",
+    "language": "ru",
+    "footer": "Обслуживание 10%",
+    "allergy_note": "Если у Вас аллергия на какой-либо продукт, обязательно сообщите официанту"
+  },
+  "pages": [
+    {
+      "type": "cover",
+      "page_number": 1
+    },
+    {
+      "type": "category",
+      "page_number": 2,
+      "source": "IMG_8280",
+      "title": "САЛАТЫ С МАЙОНЕЗОМ",
+      "subtitle": "Восхитительные оригинальные салаты с приятным сочетанием вкусов",
+      "hero_photo": "salad-caesar.jpg",
+      "items": [
+        { "name": "МАЛИБУ", "description": "салатный микс, пекинский, помидоры, огурцы", "price": 2490 },
+        { "name": "РОМАШКА", "description": "филе куриное, шампиньоны, маслины, огурцы маринованные, яйца куриные, майонез", "price": 2790 },
+        { "name": "МЯСНОЙ ТАНГО", "description": "филе птицы, грибы, огурцы, кукуруза, картофель, зелень", "price": 3000 },
+        { "name": "САЛАТ НЕЖНЫЙ", "description": "куриное филе, фасоль красная, огурцы маринованные, гранат", "price": 2690 },
+        { "name": "ЦЕЗАРЬ с курицей", "description": "", "price": 2390 },
+        { "name": "ЦЕЗАРЬ с креветками", "description": "", "price": 2800 },
+        { "name": "ЦЕЗАРЬ с сёмгой", "description": "", "price": 2900 },
+        { "name": "СЕЛЬДЬ ПОД ШУБОЙ", "description": "", "price": 2900 },
+        { "name": "ОЛИВЬЕ С МЯСОМ", "description": "", "price": 2390 }
+      ]
+    },
+    {
+      "type": "category",
+      "page_number": 3,
+      "source": "IMG_8282",
+      "title": "ПЕРВЫЕ БЛЮДА",
+      "subtitle": "Горячие супы по-домашнему — согревающая классика с первой ложки",
+      "hero_photo": "soup-ramen.jpg",
+      "hero_photo_secondary": "soup-tomyam.jpg",
+      "items": [
+        { "name": "ПОХМЕЛЬНЫЙ СУП", "description": "", "price": 1890 },
+        { "name": "УХА ПО-ЦАРСКИ", "description": "", "price": 2390 },
+        { "name": "СОЛЯНКА СБОРНАЯ", "description": "", "price": 2690 },
+        { "name": "ЧЕЧЕВИЧНЫЙ СУП", "description": "", "price": 1690 },
+        { "name": "МЯСО ПО-КАЗАХСКИ", "description": "", "price": 2190 },
+        { "name": "СУП-ЛАПША ПО-ДОМАШНЕМУ", "description": "", "price": 1890 },
+        { "name": "КРЕМ-СУП ГРИБНОЙ", "description": "", "price": 1890 },
+        { "name": "ОКРОШКА", "description": "по сезону", "price": 1790 },
+        { "name": "ТОМ ЯМ С МОРЕПРОДУКТАМИ", "description": "", "price": 3790 },
+        { "name": "РАМЕН С ГОВЯДИНОЙ", "description": "", "price": 2490 },
+        { "name": "СУП ХАРЧО", "description": "", "price": 1950 },
+        { "name": "РАМЕН С КУРИЦЕЙ", "description": "", "price": 2390 }
+      ]
+    },
+    {
+      "type": "category",
+      "page_number": 4,
+      "source": "IMG_8285",
+      "title": "АЗЕРБАЙДЖАНСКАЯ КУХНЯ",
+      "subtitle": "Подлинные вкусы Баку — традиционные рецепты, переданные из поколения в поколение",
+      "hero_photo": "az-khashlama.jpg",
+      "hero_photo_secondary": "az-pití.jpg",
+      "items": [
+        { "name": "ШИРАЛИ ДАНА", "description": "говядина, специи, на 2 персоны", "price": 6390 },
+        { "name": "САДЖ на 2 персоны", "description": "баклажаны, помидоры, картофель, перец болгарский, шампиньоны, зелень, специи, мясо", "price": 5290 },
+        { "name": "САДЖ КУРИЦА", "description": "", "price": 5290 },
+        { "name": "САДЖ БАРАНИНА", "description": "", "price": 6290 },
+        { "name": "САДЖ ГОВЯДИНА", "description": "", "price": 6890 },
+        { "name": "КЮФТЕ БОЗБАШ", "description": "говяжий фарш, картофель, специи", "price": 3200 },
+        { "name": "БОЗБАШ", "description": "баранья лытка, нохут, картофель, специи", "price": 2890 },
+        { "name": "ПИТИ", "description": "нохут, помидор, лук, алыча, мякоть баранины, курдюк", "price": 3500 },
+        { "name": "ДЮШБАРА", "description": "", "price": 2790 },
+        { "name": "ХАШЛАМА ИЗ БАРАНИНЫ", "description": "ягнёнок, овощи, зелень, специи", "price": 3620 },
+        { "name": "ХАШ", "description": "", "price": 3900 },
+        { "name": "ДОВГА", "description": "250 мл", "price": 1190 },
+        { "name": "РИСОВЫЙ СУП С ДОМАШНЕЙ КУРИЦЕЙ", "description": "", "price": 2690 }
+      ]
+    },
+    {
+      "type": "category",
+      "page_number": 5,
+      "source": "IMG_8291",
+      "title": "ШАШЛЫКИ МАРИНОВАННЫЕ",
+      "subtitle": "Ароматы открытого огня — сочные куски мяса, маринованные по фирменным рецептам",
+      "hero_photo": "shashlik-mix.jpg",
+      "hero_photo_secondary": "shashlik-fish.jpg",
+      "items": [
+        { "name": "АНТРЕКОТ", "description": "", "price": 3790 },
+        { "name": "ЛЮЛЯ КЕБАБ", "description": "", "price": 1690 },
+        { "name": "КУРИНОЕ ФИЛЕ", "description": "", "price": 1390 },
+        { "name": "СЕМЕЧКИ", "description": "", "price": 1690 },
+        { "name": "ОВОЩНОЙ", "description": "", "price": 1090 },
+        { "name": "БАРАНИНА", "description": "", "price": 1790 },
+        { "name": "УТКА", "description": "", "price": 1290 },
+        { "name": "КУРИЦА", "description": "", "price": 1390 },
+        { "name": "ПЕРЕПЁЛКА", "description": "", "price": 3990 },
+        { "name": "ШАМПИНЬОНЫ", "description": "", "price": 1390 },
+        { "name": "ТЮПЯ КЕБАБ", "description": "", "price": 1690 },
+        { "name": "КРЫЛЫШКИ", "description": "", "price": 1390 },
+        { "name": "ПЕЧЕНЬ", "description": "", "price": 1290 }
+      ],
+      "subsections": [
+        {
+          "title": "СЕТ ШАШЛЫКОВ",
+          "description": "куриное, люля кебаб, люля в оболочке, семечки, утка, крылышки, куриное филе, курица, печень, шампиньоны, люля картофельный, говяжий фарш, соус",
+          "price": 18000
+        },
+        {
+          "title": "ШАШЛЫК ИЗ РЫБЫ",
+          "items": [
+            { "name": "СЁМГА", "description": "200 гр", "price": 4890 },
+            { "name": "ДОРАДО", "description": "1 шт", "price": 4390 },
+            { "name": "ФОРЕЛЬ", "description": "1 шт", "price": 2990 },
+            { "name": "СКУМБРИЯ", "description": "1 шт", "price": 3690 }
+          ]
+        },
+        {
+          "title": "ТАНДЫР",
+          "items": [
+            { "name": "СЕБЕТ ИЗ БАРАНИНЫ", "description": "2.5 кг — на 6 персон", "price": 27000 }
+          ]
+        }
+      ]
+    }
+  ]
+}

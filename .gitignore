@@ -1,0 +1,5 @@
+.superpowers/
+.DS_Store
+reference/
+output/preview-*.png
+output/*.png

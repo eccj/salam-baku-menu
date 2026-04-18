@@ -1,0 +1,413 @@
+/* ================================================================
+   SALAM BAKU — Menu (Pilot)
+   Style: Bakü Elegance — cream/burgundy/gold, serif typography
+   Target: A4 print, Cyrillic-first (ru)
+   ================================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+/* ---------- Reset ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { font-family: 'PT Serif', Georgia, serif; color: #1a1a1a; background: #e8dcc0; }
+img { display: block; max-width: 100%; }
+
+/* ---------- Design tokens ---------- */
+:root {
+  --bg:        #faf5ea;   /* cream */
+  --bg-alt:    #f4ebd6;   /* deeper cream */
+  --ink:       #1a1a1a;   /* near-black body */
+  --ink-soft:  #4a3f32;   /* muted warm brown */
+  --ink-fade:  #8a7a64;   /* muted label */
+  --wine:      #7a2027;   /* burgundy accent */
+  --wine-dk:   #5a161b;
+  --gold:      #b59a4f;   /* gold rule */
+  --gold-dk:   #8d7534;
+  --rule:      rgba(181, 154, 79, 0.5);
+
+  --serif-display: 'Playfair Display', 'PT Serif', Georgia, serif;
+  --serif-body:    'PT Serif', Georgia, serif;
+  --serif-accent:  'Cormorant Garamond', 'PT Serif', Georgia, serif;
+}
+
+/* ---------- Page (A4) ---------- */
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+
+.page {
+  width: 210mm;
+  height: 297mm;
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+  page-break-after: always;
+  break-after: page;
+}
+.page:last-of-type { page-break-after: auto; break-after: auto; }
+
+/* Paper texture (subtle linen via radial gradient) */
+.page::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 10%, rgba(181,154,79,0.03) 0%, transparent 35%),
+    radial-gradient(circle at 80% 90%, rgba(122,32,39,0.02) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+/* ---------- COVER ---------- */
+.cover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 26mm 22mm;
+}
+.cover-top {
+  text-align: center;
+  font-family: var(--serif-accent);
+  font-size: 8pt;
+  letter-spacing: 0.2em;
+  color: var(--ink-fade);
+}
+.cover-center { text-align: center; }
+.cover-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6mm;
+  margin-bottom: 12mm;
+}
+.cover-brand .emblem {
+  width: 16mm; height: 16mm;
+  border: 1.5px solid var(--wine);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+.cover-brand .emblem svg { width: 10mm; height: 10mm; fill: var(--wine); }
+.cover-brand .name {
+  font-family: var(--serif-display);
+  font-size: 20pt;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--wine);
+  line-height: 1;
+}
+.cover-brand .name small {
+  display: block;
+  font-size: 7pt;
+  letter-spacing: 0.5em;
+  color: var(--ink-fade);
+  margin-top: 2mm;
+  font-weight: 400;
+}
+
+.cover-rule {
+  width: 22mm; height: 1px; background: var(--gold);
+  margin: 8mm auto;
+  position: relative;
+}
+.cover-rule::before, .cover-rule::after {
+  content: "";
+  position: absolute; top: -2px;
+  width: 4px; height: 4px; border-radius: 50%;
+  background: var(--gold);
+}
+.cover-rule::before { left: -6px; }
+.cover-rule::after  { right: -6px; }
+
+.cover-title {
+  font-family: var(--serif-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 118pt;
+  line-height: 0.95;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.cover-subtitle {
+  font-family: var(--serif-accent);
+  font-style: italic;
+  font-size: 14pt;
+  color: var(--ink-soft);
+  margin-top: 4mm;
+  letter-spacing: 0.08em;
+}
+
+.cover-bottom {
+  text-align: center;
+  font-family: var(--serif-accent);
+  font-size: 7.5pt;
+  letter-spacing: 0.35em;
+  color: var(--wine);
+  text-transform: uppercase;
+}
+.cover-bottom small {
+  display: block;
+  font-family: var(--serif-body);
+  font-style: italic;
+  font-size: 7pt;
+  color: var(--ink-fade);
+  letter-spacing: 0.05em;
+  text-transform: none;
+  margin-top: 3mm;
+  max-width: 130mm;
+  margin-left: auto; margin-right: auto;
+}
+
+/* ---------- CATEGORY PAGE ---------- */
+.category {
+  padding: 14mm 14mm 12mm;
+  display: flex;
+  flex-direction: column;
+  gap: 4mm;
+  height: 297mm;
+}
+.category .body { flex: 1 1 auto; }
+.category > .subsection:not(.push) { flex: 0 0 auto; }
+.category .page-footer { margin-top: auto; }
+
+.page-header {
+  text-align: center;
+  position: relative;
+}
+.page-header .eyebrow {
+  font-family: var(--serif-accent);
+  font-size: 7.5pt;
+  letter-spacing: 0.4em;
+  color: var(--gold-dk);
+  text-transform: uppercase;
+  margin-bottom: 3mm;
+}
+.page-header h2 {
+  font-family: var(--serif-display);
+  font-weight: 700;
+  font-size: 26pt;
+  line-height: 1;
+  color: var(--wine);
+  letter-spacing: 0.04em;
+}
+.page-header .subtitle {
+  font-family: var(--serif-accent);
+  font-style: italic;
+  font-size: 11pt;
+  color: var(--ink-soft);
+  margin-top: 3mm;
+  letter-spacing: 0.02em;
+  max-width: 160mm;
+  margin-left: auto; margin-right: auto;
+}
+
+/* decorative rule */
+.ornament-rule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4mm;
+  margin: 1mm 0;
+}
+.ornament-rule .line {
+  flex: 0 0 30mm;
+  height: 1px;
+  background: var(--gold);
+}
+.ornament-rule .diamond {
+  width: 4mm; height: 4mm;
+  transform: rotate(45deg);
+  border: 1px solid var(--gold);
+  background: var(--bg);
+}
+.ornament-rule .diamond::after {
+  content: "";
+  display: block;
+  width: 2mm; height: 2mm;
+  background: var(--gold);
+  margin: 1mm;
+}
+
+/* ---------- BODY LAYOUT (2 cols + photo rail) ---------- */
+.body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8mm;
+  align-content: start;
+  min-width: 0;
+}
+.body.with-photos {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 52mm;
+  gap: 7mm;
+}
+
+.items { display: flex; flex-direction: column; gap: 3.5mm; min-width: 0; }
+
+.item { break-inside: avoid; min-width: 0; }
+.item-head {
+  display: flex;
+  align-items: baseline;
+  gap: 2mm;
+  min-width: 0;
+}
+.item-name {
+  font-family: var(--serif-display);
+  font-weight: 700;
+  font-size: 9.5pt;
+  color: var(--ink);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  flex: 0 1 auto;
+  min-width: 0;
+}
+.item-dots {
+  flex: 1 1 auto;
+  border-bottom: 1px dotted var(--ink-fade);
+  margin: 0 1mm;
+  transform: translateY(-3pt);
+  opacity: 0.5;
+  min-width: 4mm;
+}
+.item-price {
+  font-family: var(--serif-display);
+  font-weight: 600;
+  font-size: 9.5pt;
+  color: var(--wine);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+.item-price small {
+  font-size: 6.5pt;
+  font-weight: 400;
+  color: var(--ink-fade);
+  margin-left: 1px;
+  letter-spacing: 0.05em;
+  text-transform: lowercase;
+}
+.item-desc {
+  font-family: var(--serif-accent);
+  font-style: italic;
+  font-size: 8pt;
+  color: var(--ink-soft);
+  line-height: 1.35;
+  margin-top: 0.5mm;
+  padding-right: 4mm;
+}
+
+/* Photo rail */
+.photo-rail {
+  display: flex;
+  flex-direction: column;
+  gap: 4mm;
+  min-width: 0;
+}
+.photo-card {
+  position: relative;
+  border: 1px solid var(--gold);
+  box-shadow: 0 1mm 3mm rgba(90, 22, 27, 0.08);
+  background: var(--bg);
+  padding: 1.5mm;
+}
+.photo-card img {
+  width: 100%;
+  height: 50mm;
+  object-fit: cover;
+  display: block;
+}
+.photo-card.tall img { height: 100mm; }
+.photo-caption {
+  font-family: var(--serif-accent);
+  font-style: italic;
+  font-size: 7.5pt;
+  color: var(--ink-soft);
+  text-align: center;
+  margin-top: 1.5mm;
+  letter-spacing: 0.04em;
+}
+
+/* ---------- SUBSECTIONS (for Шашлыки) ---------- */
+.subsection {
+  margin-top: 2mm;
+  padding-top: 2mm;
+  border-top: 1px solid var(--rule);
+}
+.subsection h3 {
+  font-family: var(--serif-display);
+  font-size: 11pt;
+  font-weight: 700;
+  color: var(--wine);
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2mm;
+}
+.subsection .description {
+  font-family: var(--serif-accent);
+  font-style: italic;
+  font-size: 7.5pt;
+  color: var(--ink-soft);
+  text-align: center;
+  margin-top: 1mm;
+  padding: 0 8mm;
+  line-height: 1.35;
+}
+.subsection .items-inline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3mm;
+  text-align: center;
+}
+.subsection .items-inline .item {
+  padding: 1mm 0;
+  border-left: 1px solid var(--rule);
+}
+.subsection .items-inline .item:first-child { border-left: none; }
+.subsection .items-inline .item-name {
+  font-size: 8.5pt;
+  margin-bottom: 0.5mm;
+  display: block;
+}
+.subsection .items-inline .item-desc { margin-bottom: 0.5mm; text-align: center; padding: 0; font-size: 7pt; }
+.subsection .items-inline .item-price { display: block; font-size: 9pt; }
+.subsection .set-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 4mm;
+  padding: 2.5mm 6mm;
+  background: var(--bg-alt);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.subsection .set-block .item-price { font-size: 12pt; }
+.subsection .set-block .item-name { font-size: 11pt; letter-spacing: 0.08em; text-transform: uppercase; }
+
+/* ---------- FOOTER ---------- */
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3mm;
+  border-top: 1px solid var(--rule);
+  font-family: var(--serif-accent);
+  font-style: italic;
+  font-size: 7.5pt;
+  color: var(--ink-fade);
+  letter-spacing: 0.05em;
+}
+.page-footer .page-num {
+  font-family: var(--serif-display);
+  color: var(--gold-dk);
+  font-style: normal;
+  font-size: 8pt;
+  letter-spacing: 0.2em;
+}
+
+/* ---------- Preview-only (not for print) ---------- */
+@media screen {
+  body { padding: 20px; background: #2a2423; display: flex; flex-direction: column; gap: 18px; align-items: center; }
+  .page { box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
+}
+@media print {
+  body { background: var(--bg); padding: 0; }
+  .page { box-shadow: none; }
+}
